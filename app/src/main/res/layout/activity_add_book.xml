@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp"
+    android:background="@drawable/background_main"
+    tools:context=".AddBookActivity">
+
+    <!-- Title for the Screen -->
+    <TextView
+        android:id="@+id/addBookTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add a New Book"
+        android:textSize="24sp"
+        android:textColor="@android:color/white"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="sans-serif-medium"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:gravity="center" />
+
+    <!-- Rectangular Card Container -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/addBookTitle"
+        android:layout_marginTop="20dp"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="8dp"
+        app:cardBackgroundColor="#FFFFFF">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Book Name Field -->
+            <EditText
+                android:id="@+id/bookNameInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/edit_text_background"
+                android:hint="Book Name"
+                android:inputType="text"
+                android:padding="12dp" />
+
+            <!-- Book ID Field -->
+            <EditText
+                android:id="@+id/bookIdInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/edit_text_background"
+                android:hint="Book ID"
+                android:inputType="number"
+                android:padding="12dp" />
+
+            <!-- Author Name Field -->
+            <EditText
+                android:id="@+id/authorNameInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/edit_text_background"
+                android:hint="Author Name"
+                android:inputType="text"
+                android:padding="12dp" />
+
+            <!-- Published Date Field -->
+            <EditText
+                android:id="@+id/publishedDateInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/edit_text_background"
+                android:hint="Published Date"
+                android:inputType="date"
+                android:padding="12dp" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- Save Button -->
+    <Button
+        android:id="@+id/saveBookButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save Book"
+        android:drawableLeft="@drawable/ic_save"
+        android:layout_below="@id/cardContainer"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:padding="12dp"
+        android:backgroundTint="@color/button_color"
+        android:textColor="@android:color/white"
+        android:fontFamily="sans-serif-medium" />
+
+</RelativeLayout>
